@@ -1,0 +1,63 @@
+{
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended", // Uses the recommended rules from the @typescript-eslint/eslint-plugin
+        "prettier/@typescript-eslint", // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
+        "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2017,
+        "sourceType": "module"
+    },
+    "globals": {
+        "BigInt": true
+    },
+    "rules": {
+        "indent": [
+            "error",
+            4,
+            {
+                "MemberExpression": "off"
+            }
+        ],
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"],
+        "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
+        "object-property-newline": ["error"],
+        "lines-between-class-members": "off",
+        "no-empty": [
+            "error",
+            {
+                "allowEmptyCatch": true
+            }
+        ],
+        "no-unused-vars": "off",
+        "no-useless-escape": "off",
+        "no-constant-condition": [
+            "error",
+            {
+                "checkLoops": false
+            }
+        ],
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-inferrable-types": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/ban-types": "off",
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            {
+                "caughtErrors": "none",
+                "argsIgnorePattern": "^_|next",
+                "varsIgnorePattern": "^__|^Promise",
+                "ignoreRestSiblings": true
+            }
+        ],
+        "@typescript-eslint/explicit-function-return-type": ["error"]
+    }
+}
